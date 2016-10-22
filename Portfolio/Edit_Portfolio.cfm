@@ -265,7 +265,7 @@ query="DisplaySkills">
         	
         	<h3 style="color:brown">You can share your portfolio with prospective employers using the link above.</h3>
         		<a href="/cfPortfolio/Portfolio/Public/MyPortfolio.cfm?id=#id#&userid=#session.id#">Portfolio Link</a>
-        	
+        		<a href="/cfPortfolio/Portfolio/ExportToPDF.cfm?id=#id#&userid=#session.id#">Generate PDF</a>
         	</cfoutput>
         </div>
        </cflayoutarea>
