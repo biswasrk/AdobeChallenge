@@ -51,7 +51,7 @@
 								<li>
 									<div class="left">
 										<a href="#myPortfolio.website#" title="#myPortfolio.title#" class="viewDetail ">
-											<img src="assets/images/portfolio/#myPortfolio.image#"   alt=" " border="0" />
+											<img src="/cfPortfolio/Portfolio/assets/images/portfolio/#myPortfolio.image#"   alt=" " border="0" />
 											<h5>#myPortfolio.title#</h5>
 										</a>
 									</div>

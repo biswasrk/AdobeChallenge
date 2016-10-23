@@ -89,6 +89,22 @@ WHERE ID = #id#
 						<div>
 							<h1>Portfolio</h1>
 						</div>
+						<div>
+							<div  style="margin:40px; background-color: azure; padding: 10px;">
+				<cfif DisplayMission.RecordCount>
+					<cfif DisplayMission.ResumeId neq ''>
+					<cfquery name="qResumeVerify">
+   					SELECT ID,ResumeName,ResumeLocation  from  Resumes 
+    			 Where Id = #DisplayMission.ResumeId#
+      
+					</cfquery>	
+	
+			<cfoutput>
+				<a href="MyPort/Download_Resume.cfm?id=#qResumeVerify.ID#"><img src="/cfPortfolio/images/WordIcon.gif" alt="wordlogo" name="wordlogo" width="30" height="30" id="wordlogo" /><h2> #qResumeVerify.ResumeName# </h2> </a>
+				</cfoutput>
+				</cfif> 
+				</cfif>
+						</div>
 					</div> 
 				</div>
 				<div class="clr">
@@ -141,20 +157,7 @@ WHERE ID = #id#
 				
 			</cfoutput>
 			
-			<div  style="margin:40px;box-shadow: 3px 3px 3px #888888; background-color: azure; padding: 10px;">
-				<cfif DisplayMission.RecordCount>
-					<cfif DisplayMission.ResumeId neq ''>
-					<cfquery name="qResumeVerify">
-   					SELECT ID,ResumeName,ResumeLocation  from  Resumes 
-    			 Where Id = #DisplayMission.ResumeId#
-      
-					</cfquery>	
-	
-			<cfoutput>
-				<a href="MyPort/Download_Resume.cfm?id=#qResumeVerify.ID#"><img src="/cfPortfolio/images/WordIcon.gif" alt="wordlogo" name="wordlogo" width="30" height="30" id="wordlogo" /><h2> #qResumeVerify.ResumeName# </h2> </a>
-				</cfoutput>
-				</cfif> 
-				</cfif>
+			
 			</div>
 			
 		</div>
